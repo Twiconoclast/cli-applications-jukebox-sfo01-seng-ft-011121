@@ -49,5 +49,8 @@ def run
   puts "Please enter a command:"
   command = gets.strip
   case command
-    when 
+    when "play"
+      play(songs)
+      run
+      when
 end
