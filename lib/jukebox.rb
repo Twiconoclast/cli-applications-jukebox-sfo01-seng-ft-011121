@@ -64,5 +64,5 @@ def run
       run
     when "exit"
       exit_jukebox
-    end
+  end
 end
