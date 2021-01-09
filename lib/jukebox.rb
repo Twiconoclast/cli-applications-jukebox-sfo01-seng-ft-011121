@@ -27,12 +27,18 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   song = gets.strip
-  if song <= songs.length
-    puts "Playing #{songs[song]}"
-  elsif songs.any? {|s| s.include?(song)}
-    puts "Playing #{song}"
-  else
-    puts "Invalid input, please try again"
-    play(songs)
+  songs.each_with_index do |s, i| 
+    split_song = s.split(" - ")
+      if split_song[1] == song
+        return puts "Playing #{song}"
+        break
+      elsif song == (i + 1).to_s
+        return puts "Playing #{split_song[1]}"
+        break
+      end
   end
+  puts "Invalid input, please try again"
+  play(songs)
 end
+
+def exit_
