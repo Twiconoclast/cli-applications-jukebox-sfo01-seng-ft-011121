@@ -32,9 +32,9 @@ def play(songs)
       return puts "Playing #{song}"
     break
     elsif song == (i + 1).to_s
-      return puts "Playing #{split_song[1]}"
-        break
-      end
+      return puts "Playing #{songs[i]}"
+      break
+    end
   end
   puts "Invalid input, please try again"
   play(songs)
