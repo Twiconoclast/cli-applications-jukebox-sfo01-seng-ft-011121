@@ -52,10 +52,10 @@ def run
   end
   case command
     when "play"
-      play(songs)
+      play
       run
     when "list"
-      list(songs)
+      list
       run
     when "help"
       help
