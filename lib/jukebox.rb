@@ -47,10 +47,22 @@ end
 
 def run
   puts "Please enter a command:"
+  commands = ["play", "list", "help", "exit"]
   command = gets.strip
+  if !commands.include?(command)
+    run
+  end
   case command
     when "play"
       play(songs)
       run
-      when
+    when "list"
+      list(songs)
+      run
+    when "help"
+      help
+      run
+    when "exit"
+      exit_jukebox
+    end
 end
