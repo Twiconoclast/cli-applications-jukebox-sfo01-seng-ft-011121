@@ -27,6 +27,10 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   song = gets.strip
-  if song <= songs.length || songs.any? {|s| s.include?(song)}
+  if song <= songs.length
+    puts "Playing #{songs[song]}"
+  elsif songs.any? {|s| s.include?(song)}
+    puts "Playing #{song}"
+  else
     puts 
 end
