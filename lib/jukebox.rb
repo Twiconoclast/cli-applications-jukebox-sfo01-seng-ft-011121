@@ -28,8 +28,7 @@ def play(songs)
   puts "Please enter a song name or number:"
   song = gets.strip
   songs.each_with_index do |s, i| 
-    split_song = s.split(" - ")
-      if split_song[1] == song
+    if split_song[1] == song
         return puts "Playing #{song}"
         break
       elsif song == (i + 1).to_s
