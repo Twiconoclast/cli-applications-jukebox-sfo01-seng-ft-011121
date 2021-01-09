@@ -46,5 +46,8 @@ def exit_jukebox
 end
 
 def run
-  puts 
+  puts "Please enter a command:"
+  command = gets.strip
+  case command = "play"
+    
 end
