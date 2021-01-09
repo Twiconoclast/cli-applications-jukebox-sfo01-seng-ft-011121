@@ -32,5 +32,7 @@ def play(songs)
   elsif songs.any? {|s| s.include?(song)}
     puts "Playing #{song}"
   else
-    puts 
+    puts "Invalid input, please try again"
+    play(songs)
+  end
 end
