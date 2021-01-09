@@ -48,9 +48,6 @@ def run
   commands = ["play", "list", "help", "exit"]
   puts "Please enter a command:"
   command = gets.strip
-  if !commands.include?(command)
-    run
-  end
   case command
     when "play"
       play
