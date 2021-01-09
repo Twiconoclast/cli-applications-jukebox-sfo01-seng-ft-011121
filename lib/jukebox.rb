@@ -44,6 +44,7 @@ def exit_jukebox
 end
 
 def run
+  while command != "exit"
   puts "Please enter a command:"
   commands = ["play", "list", "help", "exit"]
   command = gets.strip
@@ -53,14 +54,12 @@ def run
   case command
     when "play"
       play
-      run
     when "list"
       list
-      run
     when "help"
       help
-      run
     when "exit"
       exit_jukebox
+  end
   end
 end
